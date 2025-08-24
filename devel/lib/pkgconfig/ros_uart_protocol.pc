@@ -1,0 +1,8 @@
+prefix=/home/zhengtuo/nailong_ws/devel
+
+Name: ros_uart_protocol
+Description: Description of ros_uart_protocol
+Version: 0.0.0
+Cflags: -I/home/zhengtuo/nailong_ws/src/ros_uart_protocol/include
+Libs: -L${prefix}/lib -lros_uart_protocol
+Requires: roscpp std_msgs sensor_msgs geometry_msgs nav_msgs tf serial

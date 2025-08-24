@@ -1,0 +1,45 @@
+# 基本参数
+TrajectoryPlannerROS:
+  
+  # 机器人速度限制
+  max_vel_x: 0.5        # 最大前进速度(m/s)
+  min_vel_x: 0.0        # 最小前进速度(m/s)
+  max_vel_y: 0.0        # 最大横向速度(m/s，差分驱动机器人为0)
+  min_vel_y: 0.0        # 最小横向速度(m/s)
+  max_vel_theta: 1.0    # 最大旋转速度(rad/s)
+  min_vel_theta: -1.0   # 最小旋转速度(rad/s)
+  
+  # 加速度限制
+  acc_lim_x: 1.0        # 前进加速度限制(m/s²)
+  acc_lim_y: 0.0        # 横向加速度限制(m/s²，差分驱动机器人为0)
+  acc_lim_theta: 1.0    # 旋转加速度限制(rad/s²)
+  
+  # 目标容差
+  xy_goal_tolerance: 0.1    # 到达目标点的xy容差(米)
+  yaw_goal_tolerance: 0.1   # 到达目标点的角度容差(弧度)
+  
+  # 前向模拟参数
+  sim_time: 1.5          # 前向模拟时间(秒)
+  vx_samples: 6          # x速度采样数
+  vtheta_samples: 20     # 角速度采样数
+  
+  # 代价函数权重
+  path_distance_bias: 32.0      # 跟随全局路径的权重
+  goal_distance_bias: 24.0      # 朝向目标点的权重
+  occdist_scale: 0.1            # 避开障碍物的权重
+  
+  # 其他参数
+  holonomic_robot: false        # 是否为全向机器人
+  meter_scoring: true           # 是否以米为单位进行评分
+  
+  # 恢复行为
+  recovery_behavior_enabled: true  # 启用恢复行为
+  clearing_rotation_allowed: true  # 允许清理旋转
+  conservative_reset_dist: 3.0     # 保守重置距离(米)
+  
+  # 振荡相关
+  oscillation_reset_dist: 0.05     # 振荡重置距离(米)
+  
+  # 发布话题
+  publish_cost_grid_pc: false      # 是否发布代价网格点云
+  global_frame_id: odom            # 全局坐标系ID

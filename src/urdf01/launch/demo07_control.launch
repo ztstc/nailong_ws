@@ -1,0 +1,24 @@
+<launch>
+    <!-- 将 urdf 文件内容设置进参数服务器 -->
+    <param name="robot_description" textfile="$(find urdf01)/urdf/urdf/nailong_model.urdf" />
+
+    <!-- 启动 rivz -->
+    <node pkg="rviz" type="rviz" name="rviz_test" args="-d $(find urdf01)/config/show_mycar.rviz" />
+
+    <!-- 启动机器人状态和关节状态发布节点 -->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
+
+    <!-- 启动图形化的控制关节运动节点 -->
+    <!-- <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui" /> -->
+
+    <!-- 集成arbotix 运动控制节点 并且加载参数 -->
+    <node pkg="arbotix_python" type="arbotix_driver" name="driver" output="screen">
+        <rosparam command="load" file="$(find urdf01)/config/control.yaml" />
+        <param name = "sim" value= "true" />
+        <!-- <param name="port" value="/dev/ttyUSB0" />
+        <param name="baud" value="1000000" /> -->
+        <!-- <rosparam file="$(find urdf01)/config/nailong.yaml" command="load" /> -->
+    </node>
+
+</launch>

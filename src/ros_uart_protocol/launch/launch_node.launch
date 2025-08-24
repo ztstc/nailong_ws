@@ -1,0 +1,28 @@
+<launch>
+    <!-- 串口协议节点 -->
+    <node name="uart_protocol_node" 
+          pkg="ros_uart_protocol" 
+          type="ros_uart_protocol_node" 
+          output="screen"
+          respawn="true"
+          respawn_delay="5">
+
+
+        <!-- 串口参数配置 -->
+        <param name="serial_port" value="/dev/ttyACM0" />
+        <param name="baudrate" value="115200" />
+        
+        <!-- 机器人运动参数 -->
+        <param name="wheel_separation" value="0.425" />  <!-- 轮间距(米) -->
+        <param name="wheel_radius" value="0.085" />      <!-- 轮半径(米) -->
+    </node>
+
+    <!-- 可选的Rviz启动配置 -->
+    <param name="robot_description" textfile="$(find ros_uart_protocol)/urdf/nailong_model.urdf" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ros_uart_protocol)/config/nailong.rviz"/>
+
+       <!-- 启动机器人状态和关节状态发布节点 -->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
+    
+</launch>
