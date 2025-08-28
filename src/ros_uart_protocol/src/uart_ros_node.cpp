@@ -109,9 +109,12 @@ private:
         };
         status_pub_.publish(status_msg);
         
-        // 发布电池电压
+        // 发布电池电压，过滤掉0.0，发布上一次有效值
         std_msgs::Float32 battery_msg;
-        battery_msg.data = status.batteryVoltage;
+        if (status.batteryVoltage > 0.01) {
+            last_valid_battery_voltage_ = status.batteryVoltage;
+        }
+        battery_msg.data = last_valid_battery_voltage_;
         battery_pub_.publish(battery_msg);
         
         // 发布关节状态
@@ -232,6 +235,9 @@ private:
     // 机器人参数（可根据实际情况调整）
     const double wheel_separation = 0.425;
     const double wheel_radius = 0.085;
+
+    // 记录上一次有效的电池电压
+    float last_valid_battery_voltage_ = 0.0;
 };
 
 int main(int argc, char** argv) {

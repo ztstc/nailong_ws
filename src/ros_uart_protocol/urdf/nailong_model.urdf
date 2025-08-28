@@ -90,7 +90,7 @@
         </visual>
     </link>
 
-    <joint name="left_wheel2base_link" type="continuous">
+    <joint name="wheel_left_joint" type="continuous">
         <parent link="base_link" />
         <child link="left_wheel" />
         <origin xyz="0 0.24 -0.0755" />
@@ -109,7 +109,7 @@
         </visual>
     </link>
 
-    <joint name="right_wheel2base_link" type="continuous">
+    <joint name="wheel_right_joint" type="continuous">
         <parent link="base_link" />
         <child link="right_wheel" />
         <origin xyz="0 -0.24 -0.0755" />
@@ -140,7 +140,7 @@
         </visual>
     </link>
 
-    <joint name="front_wheel2base_link" type="continuous">
+    <joint name="front_wheel2base_link" type="fixed">
         <parent link="base_link" />
         <child link="front_wheel" />
         <origin xyz="0.17 0 -0.119" />
@@ -159,7 +159,7 @@
         </visual>
     </link>
 
-    <joint name="back_wheel2base_link" type="continuous">
+    <joint name="back_wheel2base_link" type="fixed">
         <parent link="base_link" />
         <child link="back_wheel" />
         <origin xyz="-0.17 0 -0.119" />

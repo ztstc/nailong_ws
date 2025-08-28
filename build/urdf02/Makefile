@@ -90,17 +90,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -112,6 +101,17 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -198,79 +198,34 @@ control_msgs_generate_messages_nodejs/fast:
 .PHONY : control_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/rule
-.PHONY : urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/rule
+urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/rule
+.PHONY : urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-control_toolbox_generate_messages_lisp: urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/rule
+control_msgs_generate_messages_py: urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/rule
 
-.PHONY : control_toolbox_generate_messages_lisp
+.PHONY : control_msgs_generate_messages_py
 
 # fast build rule for target.
-control_toolbox_generate_messages_lisp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/build.make urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/build
-.PHONY : control_toolbox_generate_messages_lisp/fast
+control_msgs_generate_messages_py/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/build.make urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/build
+.PHONY : control_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
-.PHONY : urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
+urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+.PHONY : urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-control_toolbox_generate_messages_eus: urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
+visualization_msgs_generate_messages_eus: urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
 
-.PHONY : control_toolbox_generate_messages_eus
+.PHONY : visualization_msgs_generate_messages_eus
 
 # fast build rule for target.
-control_toolbox_generate_messages_eus/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/build.make urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/build
-.PHONY : control_toolbox_generate_messages_eus/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/control_toolbox_gencfg.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_gencfg.dir/rule
-.PHONY : urdf02/CMakeFiles/control_toolbox_gencfg.dir/rule
-
-# Convenience name for target.
-control_toolbox_gencfg: urdf02/CMakeFiles/control_toolbox_gencfg.dir/rule
-
-.PHONY : control_toolbox_gencfg
-
-# fast build rule for target.
-control_toolbox_gencfg/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_gencfg.dir/build.make urdf02/CMakeFiles/control_toolbox_gencfg.dir/build
-.PHONY : control_toolbox_gencfg/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
-.PHONY : urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_nodejs: urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_nodejs/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
-.PHONY : controller_manager_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-.PHONY : urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_lisp: urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_lisp
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_lisp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
-.PHONY : controller_manager_msgs_generate_messages_lisp/fast
+visualization_msgs_generate_messages_eus/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
+.PHONY : visualization_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 urdf02/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule:
@@ -348,94 +303,19 @@ gazebo_msgs_generate_messages_eus/fast:
 .PHONY : gazebo_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
-.PHONY : urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
+urdf02/CMakeFiles/control_toolbox_gencfg.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_gencfg.dir/rule
+.PHONY : urdf02/CMakeFiles/control_toolbox_gencfg.dir/rule
 
 # Convenience name for target.
-control_msgs_generate_messages_eus: urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
+control_toolbox_gencfg: urdf02/CMakeFiles/control_toolbox_gencfg.dir/rule
 
-.PHONY : control_msgs_generate_messages_eus
+.PHONY : control_toolbox_gencfg
 
 # fast build rule for target.
-control_msgs_generate_messages_eus/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/build.make urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/build
-.PHONY : control_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/rule
-.PHONY : urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/rule
-
-# Convenience name for target.
-control_toolbox_generate_messages_py: urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/rule
-
-.PHONY : control_toolbox_generate_messages_py
-
-# fast build rule for target.
-control_toolbox_generate_messages_py/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/build.make urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/build
-.PHONY : control_toolbox_generate_messages_py/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-.PHONY : urdf02/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_eus: urdf02/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-
-.PHONY : nodelet_generate_messages_eus
-
-# fast build rule for target.
-nodelet_generate_messages_eus/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/nodelet_generate_messages_eus.dir/build.make urdf02/CMakeFiles/nodelet_generate_messages_eus.dir/build
-.PHONY : nodelet_generate_messages_eus/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
-.PHONY : urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_nodejs: urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : trajectory_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_nodejs/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
-.PHONY : trajectory_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
-.PHONY : urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-gazebo_msgs_generate_messages_nodejs: urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : gazebo_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-gazebo_msgs_generate_messages_nodejs/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
-.PHONY : gazebo_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-.PHONY : urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_eus: urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-
-.PHONY : trajectory_msgs_generate_messages_eus
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_eus/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
-.PHONY : trajectory_msgs_generate_messages_eus/fast
+control_toolbox_gencfg/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_gencfg.dir/build.make urdf02/CMakeFiles/control_toolbox_gencfg.dir/build
+.PHONY : control_toolbox_gencfg/fast
 
 # Convenience name for target.
 urdf02/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule:
@@ -453,259 +333,19 @@ gazebo_msgs_generate_messages_py/fast:
 .PHONY : gazebo_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-urdf02/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-.PHONY : urdf02/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
+.PHONY : urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-nodelet_generate_messages_cpp: urdf02/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+controller_manager_msgs_generate_messages_nodejs: urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : nodelet_generate_messages_cpp
+.PHONY : controller_manager_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-nodelet_generate_messages_cpp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make urdf02/CMakeFiles/nodelet_generate_messages_cpp.dir/build
-.PHONY : nodelet_generate_messages_cpp/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-.PHONY : urdf02/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_nodejs: urdf02/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-
-.PHONY : bond_generate_messages_nodejs
-
-# fast build rule for target.
-bond_generate_messages_nodejs/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/bond_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/bond_generate_messages_nodejs.dir/build
-.PHONY : bond_generate_messages_nodejs/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-.PHONY : urdf02/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_nodejs: urdf02/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-
-.PHONY : nodelet_generate_messages_nodejs
-
-# fast build rule for target.
-nodelet_generate_messages_nodejs/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
-.PHONY : nodelet_generate_messages_nodejs/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
-.PHONY : urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-control_toolbox_generate_messages_cpp: urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
-
-.PHONY : control_toolbox_generate_messages_cpp
-
-# fast build rule for target.
-control_toolbox_generate_messages_cpp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/build.make urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/build
-.PHONY : control_toolbox_generate_messages_cpp/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
-.PHONY : urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-gazebo_msgs_generate_messages_cpp: urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : gazebo_msgs_generate_messages_cpp
-
-# fast build rule for target.
-gazebo_msgs_generate_messages_cpp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build.make urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build
-.PHONY : gazebo_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/rule
-.PHONY : urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/rule
-
-# Convenience name for target.
-gazebo_plugins_gencfg: urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/rule
-
-.PHONY : gazebo_plugins_gencfg
-
-# fast build rule for target.
-gazebo_plugins_gencfg/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/build.make urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/build
-.PHONY : gazebo_plugins_gencfg/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-.PHONY : urdf02/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_lisp: urdf02/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-.PHONY : nodelet_generate_messages_lisp
-
-# fast build rule for target.
-nodelet_generate_messages_lisp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make urdf02/CMakeFiles/nodelet_generate_messages_lisp.dir/build
-.PHONY : nodelet_generate_messages_lisp/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
-.PHONY : urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_cpp: urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : control_msgs_generate_messages_cpp
-
-# fast build rule for target.
-control_msgs_generate_messages_cpp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
-.PHONY : control_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/rule
-.PHONY : urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-control_toolbox_generate_messages_nodejs: urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/rule
-
-.PHONY : control_toolbox_generate_messages_nodejs
-
-# fast build rule for target.
-control_toolbox_generate_messages_nodejs/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/build
-.PHONY : control_toolbox_generate_messages_nodejs/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/nodelet_generate_messages_py.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/nodelet_generate_messages_py.dir/rule
-.PHONY : urdf02/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_py: urdf02/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-.PHONY : nodelet_generate_messages_py
-
-# fast build rule for target.
-nodelet_generate_messages_py/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/nodelet_generate_messages_py.dir/build.make urdf02/CMakeFiles/nodelet_generate_messages_py.dir/build
-.PHONY : nodelet_generate_messages_py/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-.PHONY : urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_py: urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_py
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_py/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
-.PHONY : controller_manager_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/bond_generate_messages_eus.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/bond_generate_messages_eus.dir/rule
-.PHONY : urdf02/CMakeFiles/bond_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_eus: urdf02/CMakeFiles/bond_generate_messages_eus.dir/rule
-
-.PHONY : bond_generate_messages_eus
-
-# fast build rule for target.
-bond_generate_messages_eus/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/bond_generate_messages_eus.dir/build.make urdf02/CMakeFiles/bond_generate_messages_eus.dir/build
-.PHONY : bond_generate_messages_eus/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/bond_generate_messages_cpp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/bond_generate_messages_cpp.dir/rule
-.PHONY : urdf02/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_cpp: urdf02/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-.PHONY : bond_generate_messages_cpp
-
-# fast build rule for target.
-bond_generate_messages_cpp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/bond_generate_messages_cpp.dir/build.make urdf02/CMakeFiles/bond_generate_messages_cpp.dir/build
-.PHONY : bond_generate_messages_cpp/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/bond_generate_messages_lisp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/bond_generate_messages_lisp.dir/rule
-.PHONY : urdf02/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_lisp: urdf02/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-.PHONY : bond_generate_messages_lisp
-
-# fast build rule for target.
-bond_generate_messages_lisp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/bond_generate_messages_lisp.dir/build.make urdf02/CMakeFiles/bond_generate_messages_lisp.dir/build
-.PHONY : bond_generate_messages_lisp/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/rule
-.PHONY : urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_py: urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/rule
-
-.PHONY : control_msgs_generate_messages_py
-
-# fast build rule for target.
-control_msgs_generate_messages_py/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/build.make urdf02/CMakeFiles/control_msgs_generate_messages_py.dir/build
-.PHONY : control_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-.PHONY : urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_eus: urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_eus
-
-# fast build rule for target.
-visualization_msgs_generate_messages_eus/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make urdf02/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
-.PHONY : visualization_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-urdf02/CMakeFiles/bond_generate_messages_py.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/bond_generate_messages_py.dir/rule
-.PHONY : urdf02/CMakeFiles/bond_generate_messages_py.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_py: urdf02/CMakeFiles/bond_generate_messages_py.dir/rule
-
-.PHONY : bond_generate_messages_py
-
-# fast build rule for target.
-bond_generate_messages_py/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/bond_generate_messages_py.dir/build.make urdf02/CMakeFiles/bond_generate_messages_py.dir/build
-.PHONY : bond_generate_messages_py/fast
+controller_manager_msgs_generate_messages_nodejs/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
+.PHONY : controller_manager_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 urdf02/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
@@ -721,6 +361,51 @@ visualization_msgs_generate_messages_cpp: urdf02/CMakeFiles/visualization_msgs_g
 visualization_msgs_generate_messages_cpp/fast:
 	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make urdf02/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
 .PHONY : visualization_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+.PHONY : urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_lisp: urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_lisp
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_lisp/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make urdf02/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
+.PHONY : controller_manager_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/rule
+.PHONY : urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+control_toolbox_generate_messages_lisp: urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/rule
+
+.PHONY : control_toolbox_generate_messages_lisp
+
+# fast build rule for target.
+control_toolbox_generate_messages_lisp/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/build.make urdf02/CMakeFiles/control_toolbox_generate_messages_lisp.dir/build
+.PHONY : control_toolbox_generate_messages_lisp/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/rule
+.PHONY : urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/rule
+
+# Convenience name for target.
+gazebo_plugins_gencfg: urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/rule
+
+.PHONY : gazebo_plugins_gencfg
+
+# fast build rule for target.
+gazebo_plugins_gencfg/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/build.make urdf02/CMakeFiles/gazebo_plugins_gencfg.dir/build
+.PHONY : gazebo_plugins_gencfg/fast
 
 # Convenience name for target.
 urdf02/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
@@ -766,6 +451,36 @@ visualization_msgs_generate_messages_nodejs: urdf02/CMakeFiles/visualization_msg
 visualization_msgs_generate_messages_nodejs/fast:
 	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
 .PHONY : visualization_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
+.PHONY : urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+gazebo_msgs_generate_messages_cpp: urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : gazebo_msgs_generate_messages_cpp
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_cpp/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build.make urdf02/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build
+.PHONY : gazebo_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
+.PHONY : urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+control_toolbox_generate_messages_cpp: urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/rule
+
+.PHONY : control_toolbox_generate_messages_cpp
+
+# fast build rule for target.
+control_toolbox_generate_messages_cpp/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/build.make urdf02/CMakeFiles/control_toolbox_generate_messages_cpp.dir/build
+.PHONY : control_toolbox_generate_messages_cpp/fast
 
 # Convenience name for target.
 urdf02/CMakeFiles/gazebo_ros_gencfg.dir/rule:
@@ -827,6 +542,141 @@ controller_manager_msgs_generate_messages_eus/fast:
 	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make urdf02/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
 .PHONY : controller_manager_msgs_generate_messages_eus/fast
 
+# Convenience name for target.
+urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+.PHONY : urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_py: urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_py
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_py/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make urdf02/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
+.PHONY : controller_manager_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
+.PHONY : urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+control_toolbox_generate_messages_eus: urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/rule
+
+.PHONY : control_toolbox_generate_messages_eus
+
+# fast build rule for target.
+control_toolbox_generate_messages_eus/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/build.make urdf02/CMakeFiles/control_toolbox_generate_messages_eus.dir/build
+.PHONY : control_toolbox_generate_messages_eus/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
+.PHONY : urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+control_msgs_generate_messages_cpp: urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : control_msgs_generate_messages_cpp
+
+# fast build rule for target.
+control_msgs_generate_messages_cpp/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make urdf02/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
+.PHONY : control_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/rule
+.PHONY : urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+control_toolbox_generate_messages_nodejs: urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/rule
+
+.PHONY : control_toolbox_generate_messages_nodejs
+
+# fast build rule for target.
+control_toolbox_generate_messages_nodejs/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/control_toolbox_generate_messages_nodejs.dir/build
+.PHONY : control_toolbox_generate_messages_nodejs/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
+.PHONY : urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+control_msgs_generate_messages_eus: urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
+
+.PHONY : control_msgs_generate_messages_eus
+
+# fast build rule for target.
+control_msgs_generate_messages_eus/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/build.make urdf02/CMakeFiles/control_msgs_generate_messages_eus.dir/build
+.PHONY : control_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+.PHONY : urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_nodejs: urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_nodejs/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+.PHONY : trajectory_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+.PHONY : urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+gazebo_msgs_generate_messages_nodejs: urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : gazebo_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_nodejs/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make urdf02/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
+.PHONY : gazebo_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+.PHONY : urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_eus: urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_eus
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_eus/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make urdf02/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+.PHONY : trajectory_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/rule
+.PHONY : urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/rule
+
+# Convenience name for target.
+control_toolbox_generate_messages_py: urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/rule
+
+.PHONY : control_toolbox_generate_messages_py
+
+# fast build rule for target.
+control_toolbox_generate_messages_py/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/build.make urdf02/CMakeFiles/control_toolbox_generate_messages_py.dir/build
+.PHONY : control_toolbox_generate_messages_py/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -838,52 +688,42 @@ help:
 	@echo "... edit_cache"
 	@echo "... urdf02_xacro_generated_to_devel_space_"
 	@echo "... control_msgs_generate_messages_nodejs"
-	@echo "... control_toolbox_generate_messages_lisp"
-	@echo "... control_toolbox_generate_messages_eus"
-	@echo "... control_toolbox_gencfg"
-	@echo "... test"
-	@echo "... controller_manager_msgs_generate_messages_nodejs"
-	@echo "... controller_manager_msgs_generate_messages_lisp"
+	@echo "... control_msgs_generate_messages_py"
+	@echo "... visualization_msgs_generate_messages_eus"
 	@echo "... install/local"
 	@echo "... control_msgs_generate_messages_lisp"
 	@echo "... gazebo_msgs_generate_messages_lisp"
 	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... gazebo_msgs_generate_messages_eus"
-	@echo "... control_msgs_generate_messages_eus"
-	@echo "... control_toolbox_generate_messages_py"
-	@echo "... nodelet_generate_messages_eus"
-	@echo "... trajectory_msgs_generate_messages_nodejs"
-	@echo "... gazebo_msgs_generate_messages_nodejs"
-	@echo "... trajectory_msgs_generate_messages_eus"
+	@echo "... control_toolbox_gencfg"
 	@echo "... gazebo_msgs_generate_messages_py"
-	@echo "... nodelet_generate_messages_cpp"
-	@echo "... bond_generate_messages_nodejs"
-	@echo "... nodelet_generate_messages_nodejs"
-	@echo "... control_toolbox_generate_messages_cpp"
-	@echo "... gazebo_msgs_generate_messages_cpp"
-	@echo "... gazebo_plugins_gencfg"
-	@echo "... nodelet_generate_messages_lisp"
-	@echo "... control_msgs_generate_messages_cpp"
-	@echo "... control_toolbox_generate_messages_nodejs"
-	@echo "... nodelet_generate_messages_py"
-	@echo "... controller_manager_msgs_generate_messages_py"
-	@echo "... bond_generate_messages_eus"
-	@echo "... bond_generate_messages_cpp"
-	@echo "... bond_generate_messages_lisp"
-	@echo "... control_msgs_generate_messages_py"
-	@echo "... visualization_msgs_generate_messages_eus"
-	@echo "... bond_generate_messages_py"
+	@echo "... test"
+	@echo "... controller_manager_msgs_generate_messages_nodejs"
 	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... controller_manager_msgs_generate_messages_lisp"
+	@echo "... control_toolbox_generate_messages_lisp"
+	@echo "... gazebo_plugins_gencfg"
 	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... list_install_components"
 	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... visualization_msgs_generate_messages_nodejs"
+	@echo "... gazebo_msgs_generate_messages_cpp"
+	@echo "... control_toolbox_generate_messages_cpp"
 	@echo "... gazebo_ros_gencfg"
 	@echo "... install"
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... controller_manager_msgs_generate_messages_cpp"
 	@echo "... controller_manager_msgs_generate_messages_eus"
+	@echo "... controller_manager_msgs_generate_messages_py"
+	@echo "... control_toolbox_generate_messages_eus"
+	@echo "... control_msgs_generate_messages_cpp"
+	@echo "... control_toolbox_generate_messages_nodejs"
+	@echo "... control_msgs_generate_messages_eus"
+	@echo "... trajectory_msgs_generate_messages_nodejs"
+	@echo "... gazebo_msgs_generate_messages_nodejs"
+	@echo "... trajectory_msgs_generate_messages_eus"
+	@echo "... control_toolbox_generate_messages_py"
 .PHONY : help
 
 

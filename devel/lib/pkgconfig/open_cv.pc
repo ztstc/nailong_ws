@@ -1,0 +1,8 @@
+prefix=/home/zhengtuo/nailong_ws/devel
+
+Name: open_cv
+Description: Description of open_cv
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs sensor_msgs image_transport cv_bridge

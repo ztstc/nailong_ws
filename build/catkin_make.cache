@@ -1,2 +1,2 @@
-navi_demo01:ros_uart_protocol:urdf01:urdf02
+lakibeam_ws/src:navi_demo01:open_cv:ros_uart_protocol:urdf01:urdf02
 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/zhengtuo/nailong_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zhengtuo/nailong_ws/install -G Unix Makefiles
