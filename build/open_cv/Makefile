@@ -101,6 +101,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +134,6 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -258,6 +258,21 @@ std_msgs_generate_messages_cpp/fast:
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 open_cv/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
 	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 open_cv/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : open_cv/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
@@ -331,6 +346,21 @@ open_cv_red: open_cv/CMakeFiles/open_cv_red.dir/rule
 open_cv_red/fast:
 	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f open_cv/CMakeFiles/open_cv_red.dir/build.make open_cv/CMakeFiles/open_cv_red.dir/build
 .PHONY : open_cv_red/fast
+
+# Convenience name for target.
+open_cv/CMakeFiles/open_cv_trace.dir/rule:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 open_cv/CMakeFiles/open_cv_trace.dir/rule
+.PHONY : open_cv/CMakeFiles/open_cv_trace.dir/rule
+
+# Convenience name for target.
+open_cv_trace: open_cv/CMakeFiles/open_cv_trace.dir/rule
+
+.PHONY : open_cv_trace
+
+# fast build rule for target.
+open_cv_trace/fast:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f open_cv/CMakeFiles/open_cv_trace.dir/build.make open_cv/CMakeFiles/open_cv_trace.dir/build
+.PHONY : open_cv_trace/fast
 
 # Convenience name for target.
 open_cv/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
@@ -572,21 +602,6 @@ open_cv_green_laser/fast:
 	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f open_cv/CMakeFiles/open_cv_green_laser.dir/build.make open_cv/CMakeFiles/open_cv_green_laser.dir/build
 .PHONY : open_cv_green_laser/fast
 
-# Convenience name for target.
-open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
 src/open_cv_gray.o: src/open_cv_gray.cpp.o
 
 .PHONY : src/open_cv_gray.o
@@ -668,6 +683,33 @@ src/open_cv_red.cpp.s:
 	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f open_cv/CMakeFiles/open_cv_red.dir/build.make open_cv/CMakeFiles/open_cv_red.dir/src/open_cv_red.cpp.s
 .PHONY : src/open_cv_red.cpp.s
 
+src/open_cv_trace.o: src/open_cv_trace.cpp.o
+
+.PHONY : src/open_cv_trace.o
+
+# target to build an object file
+src/open_cv_trace.cpp.o:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f open_cv/CMakeFiles/open_cv_trace.dir/build.make open_cv/CMakeFiles/open_cv_trace.dir/src/open_cv_trace.cpp.o
+.PHONY : src/open_cv_trace.cpp.o
+
+src/open_cv_trace.i: src/open_cv_trace.cpp.i
+
+.PHONY : src/open_cv_trace.i
+
+# target to preprocess a source file
+src/open_cv_trace.cpp.i:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f open_cv/CMakeFiles/open_cv_trace.dir/build.make open_cv/CMakeFiles/open_cv_trace.dir/src/open_cv_trace.cpp.i
+.PHONY : src/open_cv_trace.cpp.i
+
+src/open_cv_trace.s: src/open_cv_trace.cpp.s
+
+.PHONY : src/open_cv_trace.s
+
+# target to generate assembly for a file
+src/open_cv_trace.cpp.s:
+	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f open_cv/CMakeFiles/open_cv_trace.dir/build.make open_cv/CMakeFiles/open_cv_trace.dir/src/open_cv_trace.cpp.s
+.PHONY : src/open_cv_trace.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -684,11 +726,14 @@ help:
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... test"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... open_cv_red"
+	@echo "... open_cv_trace"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... open_cv_gray"
@@ -707,8 +752,6 @@ help:
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... open_cv_green_laser"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... test"
 	@echo "... src/open_cv_gray.o"
 	@echo "... src/open_cv_gray.i"
 	@echo "... src/open_cv_gray.s"
@@ -718,6 +761,9 @@ help:
 	@echo "... src/open_cv_red.o"
 	@echo "... src/open_cv_red.i"
 	@echo "... src/open_cv_red.s"
+	@echo "... src/open_cv_trace.o"
+	@echo "... src/open_cv_trace.i"
+	@echo "... src/open_cv_trace.s"
 .PHONY : help
 
 

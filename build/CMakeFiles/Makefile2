@@ -255,6 +255,7 @@ navi_demo01/clean: navi_demo01/CMakeFiles/move_base_msgs_generate_messages_eus.d
 
 # Recursive "all" directory target.
 open_cv/all: open_cv/CMakeFiles/open_cv_red.dir/all
+open_cv/all: open_cv/CMakeFiles/open_cv_trace.dir/all
 open_cv/all: open_cv/CMakeFiles/open_cv_gray.dir/all
 open_cv/all: open_cv/CMakeFiles/open_cv_green_laser.dir/all
 
@@ -272,11 +273,13 @@ open_cv/clean: open_cv/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 open_cv/clean: open_cv/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 open_cv/clean: open_cv/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 open_cv/clean: open_cv/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+open_cv/clean: open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 open_cv/clean: open_cv/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 open_cv/clean: open_cv/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 open_cv/clean: open_cv/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 open_cv/clean: open_cv/CMakeFiles/roscpp_generate_messages_py.dir/clean
 open_cv/clean: open_cv/CMakeFiles/open_cv_red.dir/clean
+open_cv/clean: open_cv/CMakeFiles/open_cv_trace.dir/clean
 open_cv/clean: open_cv/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 open_cv/clean: open_cv/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 open_cv/clean: open_cv/CMakeFiles/open_cv_gray.dir/clean
@@ -293,7 +296,6 @@ open_cv/clean: open_cv/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 open_cv/clean: open_cv/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 open_cv/clean: open_cv/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 open_cv/clean: open_cv/CMakeFiles/open_cv_green_laser.dir/clean
-open_cv/clean: open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 .PHONY : open_cv/clean
 
@@ -796,6 +798,33 @@ open_cv/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
 .PHONY : open_cv/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
+# Target rules for target open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhengtuo/nailong_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+.PHONY : open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhengtuo/nailong_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhengtuo/nailong_ws/build/CMakeFiles 0
+.PHONY : open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# clean rule for target.
+open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
 # Target rules for target open_cv/CMakeFiles/roscpp_generate_messages_nodejs.dir
 
 # All Build rule for target.
@@ -929,6 +958,33 @@ open_cv_red: open_cv/CMakeFiles/open_cv_red.dir/rule
 open_cv/CMakeFiles/open_cv_red.dir/clean:
 	$(MAKE) -f open_cv/CMakeFiles/open_cv_red.dir/build.make open_cv/CMakeFiles/open_cv_red.dir/clean
 .PHONY : open_cv/CMakeFiles/open_cv_red.dir/clean
+
+#=============================================================================
+# Target rules for target open_cv/CMakeFiles/open_cv_trace.dir
+
+# All Build rule for target.
+open_cv/CMakeFiles/open_cv_trace.dir/all:
+	$(MAKE) -f open_cv/CMakeFiles/open_cv_trace.dir/build.make open_cv/CMakeFiles/open_cv_trace.dir/depend
+	$(MAKE) -f open_cv/CMakeFiles/open_cv_trace.dir/build.make open_cv/CMakeFiles/open_cv_trace.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhengtuo/nailong_ws/build/CMakeFiles --progress-num=21,22 "Built target open_cv_trace"
+.PHONY : open_cv/CMakeFiles/open_cv_trace.dir/all
+
+# Build rule for subdir invocation for target.
+open_cv/CMakeFiles/open_cv_trace.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhengtuo/nailong_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 open_cv/CMakeFiles/open_cv_trace.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhengtuo/nailong_ws/build/CMakeFiles 0
+.PHONY : open_cv/CMakeFiles/open_cv_trace.dir/rule
+
+# Convenience name for target.
+open_cv_trace: open_cv/CMakeFiles/open_cv_trace.dir/rule
+
+.PHONY : open_cv_trace
+
+# clean rule for target.
+open_cv/CMakeFiles/open_cv_trace.dir/clean:
+	$(MAKE) -f open_cv/CMakeFiles/open_cv_trace.dir/build.make open_cv/CMakeFiles/open_cv_trace.dir/clean
+.PHONY : open_cv/CMakeFiles/open_cv_trace.dir/clean
 
 #=============================================================================
 # Target rules for target open_cv/CMakeFiles/std_msgs_generate_messages_lisp.dir
@@ -1361,33 +1417,6 @@ open_cv_green_laser: open_cv/CMakeFiles/open_cv_green_laser.dir/rule
 open_cv/CMakeFiles/open_cv_green_laser.dir/clean:
 	$(MAKE) -f open_cv/CMakeFiles/open_cv_green_laser.dir/build.make open_cv/CMakeFiles/open_cv_green_laser.dir/clean
 .PHONY : open_cv/CMakeFiles/open_cv_green_laser.dir/clean
-
-#=============================================================================
-# Target rules for target open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhengtuo/nailong_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhengtuo/nailong_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhengtuo/nailong_ws/build/CMakeFiles 0
-.PHONY : open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# clean rule for target.
-open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target lakibeam_ws/src/CMakeFiles/std_srvs_generate_messages_py.dir
@@ -2908,7 +2937,7 @@ lakibeam_ws/src/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean:
 ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/all:
 	$(MAKE) -f ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/build.make ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/depend
 	$(MAKE) -f ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/build.make ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhengtuo/nailong_ws/build/CMakeFiles --progress-num=21,22,23 "Built target ros_uart_protocol_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhengtuo/nailong_ws/build/CMakeFiles --progress-num=23,24,25 "Built target ros_uart_protocol_node"
 .PHONY : ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/all
 
 # Build rule for subdir invocation for target.

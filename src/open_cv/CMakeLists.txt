@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   image_transport
   cv_bridge
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -107,7 +108,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES open_cv
- CATKIN_DEPENDS roscpp rospy std_msgs sensor_msgs image_transport cv_bridge
+ CATKIN_DEPENDS roscpp rospy std_msgs sensor_msgs image_transport cv_bridge geometry_msgs
 #  DEPENDS system_lib
 )
 
@@ -139,6 +140,7 @@ include_directories(
 add_executable(${PROJECT_NAME}_gray src/open_cv_gray.cpp)
 add_executable(${PROJECT_NAME}_green_laser src/open_cv_green_laser.cpp)
 add_executable(${PROJECT_NAME}_red src/open_cv_red.cpp)
+add_executable(${PROJECT_NAME}_trace src/open_cv_trace.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -162,6 +164,11 @@ target_link_libraries(${PROJECT_NAME}_gray
 )
 
 target_link_libraries(${PROJECT_NAME}_green_laser
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+)
+
+target_link_libraries(${PROJECT_NAME}_trace
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}
 )

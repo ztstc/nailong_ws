@@ -1,6 +1,7 @@
+<!-- 小车追踪绿色方块 -->
 <launch>
     <!-- 启动激光雷达节点 -->
-    <node name="richbeam_lidar" pkg="lakibeam1" type="lakibeam1_scan_node" output="screen">
+    <node name="richbeam_lidar" pkg="lakibeam1" type="lakibeam1_scan_node" output="log"> <!--避免刷新消息的时候刷屏-->
         <param name="frame_id" type="string" value="laser_link"/><!--frame_id设置-->
         <param name="output_topic" type="string" value="scan" /><!--topic设置-->
         <param name="inverted" type="bool" value="false"/><!--配置是否倒装,true倒装-->
@@ -46,16 +47,22 @@
     <!-- OpenCV节点 -->
     <node name="open_cv_trace" 
           pkg="open_cv" 
-          type="open_cv_teace" 
+          type="open_cv_trace" 
           output="screen"
           respawn="false">
         <!-- 可通过参数服务器设置订阅和发布的topic -->
-        <param name="input_topic"  value="/camera/image_raw"/>
-        <param name="output_topic" value="/image_converter/output"/>
-        <param name="laser_topic" value="/scan"/>
+        <param name="input_topic"  value="camera/image_raw"/>
+        <param name="output_topic" value="image_converter/output"/>
+        <param name="laser_topic" value="scan"/>
+        <param name="pid/kp" value="0.004"/>
+        <param name="pid/ki" value="0.000"/>
+        <param name="pid/kd" value="0.0015"/>
+        <param name="motion/v_max" value="2.5"/>
+        <param name="motion/v_min" value="0.2"/>
+        <param name="motion/stop_dist" value="0.5"/>
+        <param name="motion/full_dist" value="1.2"/>
     </node>
     <!-- 小车节点 -->
-     <!-- 串口协议节点 -->
     <node name="uart_protocol_node" 
           pkg="ros_uart_protocol" 
           type="ros_uart_protocol_node" 
@@ -64,7 +71,7 @@
           respawn_delay="5">
 
 
-        <!-- 串口参数配置 -->
+        <!-- 小车串口参数配置 -->
         <param name="serial_port" value="/dev/ttyACM0" />
         <param name="baudrate" value="115200" />
         

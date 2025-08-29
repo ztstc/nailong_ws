@@ -363,6 +363,19 @@ std_msgs_generate_messages_cpp/fast:
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_nodejs
 
 # Build rule for target.
@@ -426,6 +439,19 @@ open_cv_red: cmake_check_build_system
 open_cv_red/fast:
 	$(MAKE) -f open_cv/CMakeFiles/open_cv_red.dir/build.make open_cv/CMakeFiles/open_cv_red.dir/build
 .PHONY : open_cv_red/fast
+
+#=============================================================================
+# Target rules for targets named open_cv_trace
+
+# Build rule for target.
+open_cv_trace: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open_cv_trace
+.PHONY : open_cv_trace
+
+# fast build rule for target.
+open_cv_trace/fast:
+	$(MAKE) -f open_cv/CMakeFiles/open_cv_trace.dir/build.make open_cv/CMakeFiles/open_cv_trace.dir/build
+.PHONY : open_cv_trace/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
@@ -634,19 +660,6 @@ open_cv_green_laser: cmake_check_build_system
 open_cv_green_laser/fast:
 	$(MAKE) -f open_cv/CMakeFiles/open_cv_green_laser.dir/build.make open_cv/CMakeFiles/open_cv_green_laser.dir/build
 .PHONY : open_cv_green_laser/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make open_cv/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named std_srvs_generate_messages_py
@@ -2093,11 +2106,13 @@ help:
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... open_cv_red"
+	@echo "... open_cv_trace"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... open_cv_gray"
@@ -2114,7 +2129,6 @@ help:
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... open_cv_green_laser"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... nodelet_topic_tools_gencfg"
