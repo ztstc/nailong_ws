@@ -27,8 +27,10 @@ enum ProtocolCmd {
     CMD_ERROR_REPORT = 0x05,
     CMD_REQUEST_STATUS = 0x06,
     CMD_SERVO_CONTROL = 0x07,
-    CMD_REQUEST_MOTOR_SPEED = 0x08,  // 新增：电机转速请求命令
-    CMD_MOTOR_SPEED_FEEDBACK = 0x09  // 新增：电机转速反馈
+    CMD_REQUEST_MOTOR_SPEED = 0x08,
+    CMD_MOTOR_SPEED_FEEDBACK = 0x09,
+    CMD_LIGHT_CONTROL = 0x0A,        // 灯光控制
+    CMD_MOTOR_ENABLE = 0x0B          // 电机启停控制
 };
 
 // 接收状态机
@@ -80,6 +82,8 @@ struct RobotStatus {
     uint8_t CPU;                 // MCU CPU使用率(%)
     uint8_t RAM;                 // MCU RAM使用率(%)
     uint8_t error_flags;         // 错误标志
+    bool lightEnabled;           // 灯光启用状态
+    uint8_t lightBrightness;     // 灯光亮度(0-100%)
 };
 #pragma pack(pop)
 
@@ -97,8 +101,10 @@ public:
     void sendMotionCommand(float left_speed, float right_speed);
     void sendServoCommand(uint8_t servo_id, int16_t angle);
     void requestStatus();
-    void requestMotorSpeed();  // 新增：请求电机转速
-    void sendHeartbeat();  // 添加这一行
+    void requestMotorSpeed();
+    void sendHeartbeat();
+    void sendLightControl(uint8_t enable, uint8_t brightness);
+    void sendMotorEnable(uint8_t enable);
     
     // 状态获取
     RobotStatus getLatestStatus() const;

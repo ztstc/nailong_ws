@@ -1,0 +1,8 @@
+prefix=/home/zhengtuo/nailong_ws/install
+
+Name: inertial_nav
+Description: Description of inertial_nav
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -843,6 +843,12 @@ hardware_interface_DIR:PATH=/opt/ros/noetic/share/hardware_interface/cmake
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
 
+//Value Computed by CMake
+inertial_nav_BINARY_DIR:STATIC=/home/zhengtuo/nailong_ws/build/inertial_nav
+
+//Value Computed by CMake
+inertial_nav_SOURCE_DIR:STATIC=/home/zhengtuo/nailong_ws/src/inertial_nav
+
 //The directory containing a CMake configuration file for joint_limits_interface.
 joint_limits_interface_DIR:PATH=/opt/ros/noetic/share/joint_limits_interface/cmake
 
@@ -1217,7 +1223,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -147,6 +147,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/zhengtuo/nailong_ws/build/gtest/cmake_install.cmake")
   include("/home/zhengtuo/nailong_ws/build/open_cv/cmake_install.cmake")
+  include("/home/zhengtuo/nailong_ws/build/inertial_nav/cmake_install.cmake")
   include("/home/zhengtuo/nailong_ws/build/lakibeam_ws/src/cmake_install.cmake")
   include("/home/zhengtuo/nailong_ws/build/ros_uart_protocol/cmake_install.cmake")
   include("/home/zhengtuo/nailong_ws/build/navi_demo01/cmake_install.cmake")

@@ -57,7 +57,7 @@
         <param name="pid/kp" value="0.004"/>
         <param name="pid/ki" value="0.000"/>
         <param name="pid/kd" value="0.0015"/>
-        <param name="motion/v_max" value="2.5"/>
+        <param name="motion/v_max" value="3.5"/>
         <param name="motion/v_min" value="0.2"/>
         <param name="motion/stop_dist" value="0.5"/>
         <param name="motion/full_dist" value="1.2"/>

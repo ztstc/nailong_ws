@@ -182,81 +182,6 @@ ros_uart_protocol_node/fast:
 	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/build.make ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/build
 .PHONY : ros_uart_protocol_node/fast
 
-# Convenience name for target.
-ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_py: ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-.PHONY : nav_msgs_generate_messages_py
-
-# fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-.PHONY : ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_nodejs: ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : nav_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-nav_msgs_generate_messages_nodejs/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-.PHONY : nav_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_lisp: ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-.PHONY : ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_eus: ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-.PHONY : nav_msgs_generate_messages_eus
-
-# fast build rule for target.
-nav_msgs_generate_messages_eus/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
-.PHONY : nav_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/zhengtuo/nailong_ws/build && $(MAKE) -f ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make ros_uart_protocol/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
 src/uart_protocol_ros.o: src/uart_protocol_ros.cpp.o
 
 .PHONY : src/uart_protocol_ros.o
@@ -325,11 +250,6 @@ help:
 	@echo "... test"
 	@echo "... install/local"
 	@echo "... ros_uart_protocol_node"
-	@echo "... nav_msgs_generate_messages_py"
-	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... nav_msgs_generate_messages_eus"
-	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... src/uart_protocol_ros.o"
 	@echo "... src/uart_protocol_ros.i"
 	@echo "... src/uart_protocol_ros.s"

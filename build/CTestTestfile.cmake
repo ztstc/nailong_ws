@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("open_cv")
+subdirs("inertial_nav")
 subdirs("lakibeam_ws/src")
 subdirs("ros_uart_protocol")
 subdirs("navi_demo01")

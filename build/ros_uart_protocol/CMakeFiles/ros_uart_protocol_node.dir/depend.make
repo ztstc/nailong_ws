@@ -145,6 +145,7 @@ ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/src/uart_ros_node.cpp.o:
 ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/src/uart_ros_node.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
 ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/src/uart_ros_node.cpp.o: /opt/ros/noetic/include/std_msgs/MultiArrayDimension.h
 ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/src/uart_ros_node.cpp.o: /opt/ros/noetic/include/std_msgs/MultiArrayLayout.h
+ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/src/uart_ros_node.cpp.o: /opt/ros/noetic/include/std_msgs/UInt8.h
 ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/src/uart_ros_node.cpp.o: /opt/ros/noetic/include/tf/LinearMath/Matrix3x3.h
 ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/src/uart_ros_node.cpp.o: /opt/ros/noetic/include/tf/LinearMath/MinMax.h
 ros_uart_protocol/CMakeFiles/ros_uart_protocol_node.dir/src/uart_ros_node.cpp.o: /opt/ros/noetic/include/tf/LinearMath/QuadWord.h
