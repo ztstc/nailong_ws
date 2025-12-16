@@ -1,8 +1,0 @@
-prefix=/home/zhengtuo/nailong_ws/install
-
-Name: urdf02
-Description: Description of urdf02
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

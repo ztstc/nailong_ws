@@ -1,8 +1,0 @@
-prefix=/home/zhengtuo/nailong_ws/install
-
-Name: navi_demo01
-Description: Description of navi_demo01
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
