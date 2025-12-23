@@ -1,0 +1,168 @@
+<robot name="mycar">
+    <link name="base_footprint">
+        <visual>
+            <geometry>
+                <sphere radius="0.001" />
+            </geometry>
+        </visual>
+    </link>
+
+    <!-- 
+        参数
+            形状:圆柱 
+            半径:24.5     cm 
+            高度:14.3      cm 
+            离地:9.5    cm
+    -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.245" length="0.143" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="yellow">
+                <color rgba="0.8 0.3 0.1 0.5" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="base_link2base_footprint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link"/>
+        <origin xyz="0 0 0.1665" />
+    </joint>
+
+    <!-- 添加激光雷达 -->
+    <!--
+        参数:
+            形状: 圆柱体
+            直径: 6 cm -> 半径: 0.03 m
+            高度: 8 cm -> 0.08 m
+            位置: 小车前端中心
+            颜色: 灰色
+    -->
+    <link name="laser_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.03" length="0.06" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="gray">
+                <color rgba="0.7 0.7 0.7 1.0" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="lidar_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="laser_link" />
+        <!-- 
+            位置计算:
+                x: 底盘半径 + 激光雷达高度/2 (使其前端与底盘前缘平齐)
+                y: 0 (中心位置)
+                z: 底盘高度/2 (使激光雷达底部与底盘顶部接触)
+        -->
+        <origin xyz="0.21 0 0.1015" />
+    </joint>
+
+    <!-- 添加驱动轮 -->
+    <!--
+        驱动轮是侧翻的圆柱
+        参数
+            半径: 8.5 cm
+            宽度: 4  cm
+            颜色: 黑色
+        关节设置:
+            x = 0
+            y = 底盘的半径 + 轮胎宽度 / 2 24.5 + 0.04 / 2 = 0.27 (m)
+            z = 离地间距 + 底盘长度 / 2 - 轮胎半径 0.095 + 0.143 / 2 - 0.085 = 0.0755 (m)
+            axis = 0 1 0
+    -->
+    <link name="left_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="0.085" length="0.04" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5705 0 0" />
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="wheel_left_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="left_wheel" />
+        <origin xyz="0 0.24 -0.0755" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <link name="right_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="0.085" length="0.04" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5705 0 0" />
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="wheel_right_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="right_wheel" />
+        <origin xyz="0 -0.24 -0.0755" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <!-- 添加万向轮(支撑轮) -->
+    <!--
+        参数
+            形状: 球体
+            半径: 4.5 cm
+            颜色: 黑色
+
+        关节设置:
+            x = 自定义(底盘半径 - 万向轮半径) = 0.245 - 0.045 = 0.17 (m)
+            y = 0
+            z = 底盘长度 / 2 + 离地间距 / 2 = 0.143 / 2 + 0.095 / 2 = 0.119 (m)
+    -->
+    <link name="front_wheel">
+        <visual>
+            <geometry>
+                <sphere radius="0.045" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="front_wheel2base_link" type="fixed">
+        <parent link="base_link" />
+        <child link="front_wheel" />
+        <origin xyz="0.17 0 -0.119" />
+        <axis xyz="1 1 1" />
+    </joint>
+
+    <link name="back_wheel">
+        <visual>
+            <geometry>
+                <sphere radius="0.045" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="back_wheel2base_link" type="fixed">
+        <parent link="base_link" />
+        <child link="back_wheel" />
+        <origin xyz="-0.17 0 -0.119" />
+        <axis xyz="1 1 1" />
+    </joint>
+</robot>
