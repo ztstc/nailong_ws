@@ -1,0 +1,18 @@
+[Unit]
+Description=ROS2 LD06 LiDAR Driver (no RViz)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=zhengtuo
+Group=zhengtuo
+Environment=ROS_DOMAIN_ID=0
+ExecStart=/home/zhengtuo/nailong_ros2_ws/scripts/start_ld06.sh
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

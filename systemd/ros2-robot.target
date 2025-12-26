@@ -1,0 +1,8 @@
+[Unit]
+Description=ROS2 Robot (Chassis + LD06)
+Wants=ros2-chassis.service ros2-ld06.service
+Requires=network-online.target
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target
